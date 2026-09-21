@@ -1,41 +1,107 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Models in the Loop — Coming Soon</title>
-  <meta name="description" content="Models in the Loop is coming soon. Real models. Infinite creative. Photography, motion, licensing and generative media.">
-  <link rel="canonical" href="https://modelsintheloop.com/">
   <meta name="theme-color" content="#0B0B0B">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Models in the Loop is coming soon. Real models. Infinite creative. Photography, motion, licensing and permissioned generative media.">
+  <meta name="robots" content="index,follow">
+  <title>Models in the Loop — Coming Soon</title>
+  <link rel="canonical" href="https://modelsintheloop.com/">
+
+  <!-- Preload only the likely LCP image for each viewport. -->
+  <link rel="preload" as="image" href="Assets/hero-desktop.jpg" type="image/jpeg" fetchpriority="high" media="(min-width: 769px)">
+  <link rel="preload" as="image" href="Assets/hero-mobile.jpg" type="image/jpeg" fetchpriority="high" media="(max-width: 768px)">
+
   <meta property="og:title" content="Models in the Loop — Coming Soon">
-  <meta property="og:description" content="Real models. Infinite creative. Photography, motion, licensing and generative media.">
+  <meta property="og:description" content="Real models. Infinite creative. Photography, motion, licensing and permissioned generative media.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://modelsintheloop.com/">
-  <meta property="og:image" content="https://modelsintheloop.com/assets/og-models-in-the-loop.png">
-  <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32">
-  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <meta property="og:image" content="https://modelsintheloop.com/Assets/og-models-in-the-loop.png">
+  <link rel="icon" href="Assets/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="Assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <main id="main-content" class="page">
     <header class="header">
-      <img class="brand" src="assets/logo/full-ivory.png" alt="Models in the Loop">
+      <a class="brand-link" href="/" aria-label="Models in the Loop home">
+        <img
+          class="brand"
+          src="Assets/full-ivory.png"
+          alt="Models in the Loop"
+          width="300"
+          height="220"
+          decoding="async"
+        >
+      </a>
     </header>
 
-    <section class="hero">
-      <div class="mark-wrap" aria-hidden="true">
-        <img class="mark" src="assets/logo/ml-ivory.png" alt="">
+    <section class="hero" aria-labelledby="coming-soon-title">
+      <div class="hero-media" aria-hidden="true">
+        <picture>
+          <source media="(max-width: 768px)" srcset="Assets/hero-mobile.jpg">
+          <img
+            class="hero-image"
+            src="Assets/hero-desktop.jpg"
+            alt=""
+            width="1920"
+            height="1200"
+            sizes="100vw"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          >
+        </picture>
       </div>
-      <p class="kicker">PHOTOGRAPHY · MOTION · LICENSING · GENERATIVE MEDIA</p>
-      <h1>Coming Soon</h1>
-      <p class="tagline">REAL MODELS. INFINITE CREATIVE.</p>
-      <span class="rule" aria-hidden="true"></span>
-      <p class="intro">A new creative platform built around real models — keeping talent in the loop as creative goes further.</p>
-      <div class="contacts" aria-label="Contact Models in the Loop">
-        <a href="mailto:contact@modelsintheloop.com">contact@modelsintheloop.com</a>
-        <a href="mailto:collab@modelsintheloop.com">Collaborations</a>
-        <a href="mailto:licensing@modelsintheloop.com">Licensing</a>
+
+      <!-- If a hero asset cannot load, the obsidian background remains readable. -->
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <div class="hero__brand-mark">
+          <img
+            class="hero__logo"
+            src="Assets/ml-ivory.png"
+            alt=""
+            aria-hidden="true"
+            width="180"
+            height="120"
+            decoding="async"
+          >
+          <p class="hero__brand-name">Models in the Loop</p>
+        </div>
+
+        <div class="hero__message">
+          <p class="hero__eyebrow">Real models. Infinite creative.</p>
+          <h1 id="coming-soon-title">Coming Soon</h1>
+          <p class="hero__description">Photography · Motion · Licensing · Generative Media</p>
+          <p class="hero__statement">The model stays in the loop.</p>
+        </div>
+
+        <nav class="hero__contacts" aria-label="Models in the Loop contact options">
+          <a class="hero__contact" href="mailto:contact@modelsintheloop.com">
+            <span>General Inquiries</span>
+            <strong>contact@modelsintheloop.com</strong>
+          </a>
+          <a class="hero__contact" href="mailto:collab@modelsintheloop.com">
+            <span>Collaborate</span>
+            <strong>collab@modelsintheloop.com</strong>
+          </a>
+          <a class="hero__contact" href="mailto:licensing@modelsintheloop.com">
+            <span>Licensing</span>
+            <strong>licensing@modelsintheloop.com</strong>
+          </a>
+        </nav>
       </div>
+
+      <p class="visually-hidden">
+        The hero photograph is decorative editorial imagery. The brand message, launch status, and contact information are available as text regardless of image loading.
+      </p>
     </section>
 
     <footer class="footer">
@@ -43,5 +109,11 @@
       <span>THE MODEL STAYS IN THE LOOP.</span>
     </footer>
   </main>
+
+  <noscript>
+    <div class="noscript-note" role="status">
+      Models in the Loop — Coming Soon. Real models. Infinite creative. Photography, motion, licensing and generative media. Contact: <a href="mailto:contact@modelsintheloop.com">contact@modelsintheloop.com</a>
+    </div>
+  </noscript>
 </body>
 </html>
