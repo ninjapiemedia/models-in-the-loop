@@ -265,7 +265,7 @@ a {
 
 @media (max-width: 768px) {
   .header {
-    left: 24px;
+    display: none;
   }
 
   .hero {
@@ -291,21 +291,21 @@ a {
   .hero__content {
     width: 100%;
     padding:
-      120px
+      108px
       24px
-      max(34px, env(safe-area-inset-bottom));
+      max(24px, env(safe-area-inset-bottom));
   }
 
   .hero__brand-mark {
     position: absolute;
-    top: max(28px, env(safe-area-inset-top));
+    top: max(24px, env(safe-area-inset-top));
     left: 24px;
     margin: 0;
   }
 
   .hero__logo {
-    width: 58px;
-    margin-bottom: 10px;
+    width: 56px;
+    margin-bottom: 8px;
   }
 
   .hero__brand-name {
@@ -314,7 +314,7 @@ a {
   }
 
   .hero__message {
-    margin-top: 48vh;
+    margin-top: 39vh;
   }
 
   .hero__eyebrow {
@@ -342,8 +342,8 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px 16px;
-    margin-top: 30px;
-    padding-top: 18px;
+    margin-top: 22px;
+    padding-top: 14px;
   }
 
   .hero__contact {
